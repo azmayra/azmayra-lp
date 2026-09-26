@@ -228,14 +228,32 @@ footer{background:var(--bg);color:var(--muted);padding:40px 5vw 100px;text-align
 </div>
 
 <script>
-var CS_LIST=[{name:'CS Ghania',wa:'6281288862334'}];
-function getCS(){ return CS_LIST[0]; }
+var CS_SHIFTS=[
+  {name:'Myra',startHour:4,endHour:13,wa:'6281288862334'},
+  {name:'Emma',startHour:13,endHour:4,wa:'628111113538'}
+];
+function getCS(){
+  var hour=new Date().getHours();
+  for(var i=0;i<CS_SHIFTS.length;i++){
+    var shift=CS_SHIFTS[i];
+    if(shift.startHour<shift.endHour){
+      if(hour>=shift.startHour&&hour<shift.endHour)return shift;
+    }else if(hour>=shift.startHour||hour<shift.endHour){
+      return shift;
+    }
+  }
+  return CS_SHIFTS[0];
+}
 function updWa(){
   var cs=getCS();
   var msg=encodeURIComponent('Halo Azmayra, saya mau tanya stok Ghania Skirt');
   var url='https://wa.me/'+cs.wa+'?text='+msg;
   ['navWaBtn','heroWaBtn','compareWaBtn','stickyWaBtn'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.href=url;
+    var el=document.getElementById(id);
+    if(el){
+      el.href=url;
+      el.addEventListener('click',function(){this.href='https://wa.me/'+getCS().wa+'?text='+msg;});
+    }
   });
 }
 
