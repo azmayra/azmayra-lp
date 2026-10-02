@@ -1,0 +1,62 @@
+{
+  "brand": {
+    "name": "AZMAYRA",
+    "instagram": "@azmayra.official",
+    "tagline": "Move Freely, Live Modestly"
+  },
+  "product": {
+    "name": "Move With Your Cycle",
+    "subtitle": "Planner Olahraga Muslimah",
+    "description": "Planner printable 24 halaman untuk membantumu memahami pola siklus, mencatat energi, dan menyusun aktivitas dengan lebih sadar pada kebutuhan tubuh.",
+    "format": "PDF digital · 24 halaman · ukuran A4",
+    "price": 49000,
+    "compareAtPrice": 79000,
+    "priceLabel": "Harga launching",
+    "currency": "IDR",
+    "checkoutUrl": "https://lynk.id/azmayra/1pqqd8j4wx8z"
+  },
+  "hero": {
+    "eyebrow": "PANDUAN & TRACKER OLAHRAGA KHUSUS MUSLIMAH",
+    "headline": "Nggak perlu menebak harus bergerak seperti apa.",
+    "body": "Move With Your Cycle adalah planner olahraga muslimah 24 halaman untuk mengenali 4 fase dan hormon, menemukan ide workout serta activewear, lalu menyusun rencana mingguan. Lengkap dengan habit tracker, haid care, log energi/gejala, dan tracker qadha puasa.",
+    "primaryCta": "Lihat produk di Lynk.id",
+    "secondaryCta": "Lihat isi planner"
+  },
+  "benefits": [
+    { "title": "Pahami fase & hormon", "body": "Kenali gambaran fase menstruasi, folikuler, ovulasi, dan luteal agar lebih mudah membaca perubahan tubuhmu." },
+    { "title": "Workout dan activewear per fase", "body": "Temukan ide aktivitas dan pilihan pakaian olahraga yang bisa kamu sesuaikan dengan kondisi tubuh." },
+    { "title": "Tracker khusus muslimah", "body": "Catat haid dan qadha puasa Ramadan dalam bagian terpisah yang praktis dibuka kembali." },
+    { "title": "Rencana dan refleksi 1 siklus", "body": "Weekly planner 4 minggu, habit tracker, log energi/gejala, haid care tracker, dan evaluasi bulanan." }
+  ],
+  "phases": [
+    { "name": "Menstruasi", "days": "Contoh hari 1–5", "color": "rose", "activity": "Jalan santai, stretching, yoga lembut, atau istirahat bila dibutuhkan." },
+    { "name": "Folikuler", "days": "Contoh hari 6–13", "color": "sage", "activity": "Coba strength training atau aktivitas baru secara bertahap sesuai kesiapan." },
+    { "name": "Ovulasi", "days": "Contoh hari 14–16", "color": "gold", "activity": "Pilih sesi yang lebih menantang bila tubuh terasa siap, dengan pemanasan dan teknik yang baik." },
+    { "name": "Luteal", "days": "Contoh hari 17–28", "color": "lilac", "activity": "Atur intensitas sesuai energi; aktivitas moderat, pilates, jalan, atau stretching bisa jadi pilihan." }
+  ],
+  "contents": [
+    "Panduan 4 fase siklus dan hormon",
+    "Ide workout dan activewear per fase",
+    "Herbal, minuman, nutrisi, dan hal yang perlu diwaspadai saat haid",
+    "Mitos vs fakta dan tanda kapan perlu berkonsultasi",
+    "Profil dan peta siklus",
+    "Weekly planner untuk 4 minggu",
+    "Habit tracker bulanan",
+    "Haid care tracker dan log energi/gejala",
+    "Tracker qadha puasa Ramadan",
+    "Evaluasi siklus dan target berikutnya"
+  ],
+  "previews": [
+    { "src": "/move-with-your-cycle/assets/preview-fases.png", "alt": "Contoh halaman panduan empat fase siklus", "label": "Pahami 4 fase" },
+    { "src": "/move-with-your-cycle/assets/preview-weekly.png", "alt": "Contoh halaman weekly planner", "label": "Rencanakan gerak mingguan" },
+    { "src": "/move-with-your-cycle/assets/preview-habit.png", "alt": "Contoh halaman habit tracker bulanan", "label": "Bangun kebiasaan kecil" },
+    { "src": "/move-with-your-cycle/assets/preview-qadha.png", "alt": "Contoh halaman tracker qadha puasa", "label": "Catat qadha puasa" }
+  ],
+  "faq": [
+    { "q": "Produk ini berbentuk apa?", "a": "Ini adalah planner digital berformat PDF, 24 halaman ukuran A4. Kamu dapat menggunakannya secara digital atau mencetaknya untuk ditulis tangan." },
+    { "q": "Apakah siklus saya harus 28 hari?", "a": "Tidak. Angka hari pada fase di planner adalah contoh siklus 28 hari. Siklus tiap orang dapat berbeda; gunakan catatan pribadi dan sesuaikan dengan pola tubuhmu." },
+    { "q": "Apakah planner ini memberi diagnosis atau program medis?", "a": "Tidak. Isinya merupakan edukasi umum dan bukan pengganti nasihat dokter, bidan, atau tenaga kesehatan." },
+    { "q": "Bagaimana cara memesan?", "a": "Tekan tombol pesan untuk membuka halaman produk AZMAYRA di Lynk.id. Detail produk dan proses pemesanan dilanjutkan di halaman Lynk." }
+  ],
+  "disclaimer": "Planner ini adalah panduan edukasi umum, bukan pengganti nasihat medis. Respons tubuh dan pola siklus berbeda pada tiap orang. Hentikan aktivitas dan konsultasikan kepada tenaga kesehatan bila mengalami gejala yang mengkhawatirkan. File untuk penggunaan pribadi; dilarang membagikan ulang atau menjual kembali."
+}
