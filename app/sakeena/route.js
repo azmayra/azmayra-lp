@@ -7,7 +7,7 @@ export async function GET() {
   let html = readFileSync(join(process.cwd(), 'public', 'sakeena.html'), 'utf8')
 
   if (production) {
-    html = html.replace('</body>', '<script src="/azm-lead-tracking.js" defer></script></body>')
+    html = html.replace('</body>', '<script src="/sakeena-lead-tracking.js" defer></script></body>')
   } else {
     // Protect the shared Meta Pixel and CAPI datasets while testing PR previews.
     html = html
