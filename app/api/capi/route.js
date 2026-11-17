@@ -1,4 +1,5 @@
 import https from 'https';
+import { createHash } from 'crypto';
 
 export async function POST(request) {
   const PIXEL_ID = '298836502481494';
@@ -15,13 +16,21 @@ export async function POST(request) {
 
   // Inject client_ip_address ke setiap event
   if (body.data && Array.isArray(body.data)) {
-    body.data = body.data.map(event => ({
-      ...event,
-      user_data: {
-        ...event.user_data,
-        ...(clientIp ? { client_ip_address: clientIp } : {})
-      }
-    }));
+    body.data = body.data.map(event => {
+      const ud = event.user_data || {};
+      // external_id (di-hash SHA-256): penanda pengunjung agar Meta punya kunci identitas
+      // walaupun cookie fbp/fbc kosong. Pakai fbp bila ada, kalau tidak IP + browser.
+      const seed = ud.fbp || `${clientIp || ''}|${ud.client_user_agent || ''}`;
+      const externalId = ud.external_id || (seed.length > 1 ? createHash('sha256').update(seed).digest('hex') : undefined);
+      return {
+        ...event,
+        user_data: {
+          ...ud,
+          ...(clientIp ? { client_ip_address: clientIp } : {}),
+          ...(externalId ? { external_id: externalId } : {})
+        }
+      };
+    });
   }
 
   const postData = JSON.stringify(body);
