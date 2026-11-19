@@ -821,7 +821,7 @@ var DEFAULT_SHIFTS=[
   {label:"Shift Malam",startHour:13,endHour:4,name:"Emma",wa:"628111113538"},
 ];
 function loadShifts(){try{var s=localStorage.getItem("az_cs_ghaida");return s?JSON.parse(s):DEFAULT_SHIFTS;}catch(e){return DEFAULT_SHIFTS;}}
-function getCS(){var sh=loadShifts(),h=new Date().getHours();for(var i=0;i<sh.length;i++){var s=sh[i];if(s.startHour<s.endHour){if(h>=s.startHour&&h<s.endHour)return s;}else{if(h>=s.startHour||h<s.endHour)return s;}}return sh[0];}
+function getCS(){var _d=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Jakarta'}).format(new Date());if(_d==='2026-11-20')return {label:'Shift Pagi',startHour:4,endHour:13,name:'Myra',wa:'6281288862334'};var sh=loadShifts(),h=new Date().getHours();for(var i=0;i<sh.length;i++){var s=sh[i];if(s.startHour<s.endHour){if(h>=s.startHour&&h<s.endHour)return s;}else{if(h>=s.startHour||h<s.endHour)return s;}}return sh[0];}
 
 var selSzVarian="",selSzFinal="";
 function selSzV(btn,sz){document.querySelectorAll(".szb").forEach(function(b){b.classList.remove("active");});btn.classList.add("active");selSzVarian=sz;updWa();if(typeof fbq!=="undefined")fbq("track","InitiateCheckout",{content_name:"Ghaida Skirt "+sz});}
