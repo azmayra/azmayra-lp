@@ -245,7 +245,7 @@ document.querySelectorAll('#sz button').forEach(function(b){b.onclick=function()
 /* ===== CS shift (jam WIB) ===== */
 var SHIFTS=[{label:'Shift Pagi',start:4,end:13,name:'Myra',wa:'6281288862334'},{label:'Shift Siang-Malam',start:13,end:4,name:'Emma',wa:'628111113538'}];
 function hourWIB(){try{return +new Intl.DateTimeFormat('en-GB',{hour:'2-digit',hour12:false,timeZone:'Asia/Jakarta'}).format(new Date())%24}catch(e){return new Date().getHours()}}
-function getCS(){var h=hourWIB();for(var i=0;i<SHIFTS.length;i++){var s=SHIFTS[i];if(s.start<s.end?(h>=s.start&&h<s.end):(h>=s.start||h<s.end))return s}return SHIFTS[0]}
+function getCS(){var _d=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Jakarta'}).format(new Date());if(_d==='2026-11-20')return SHIFTS[0];var h=hourWIB();for(var i=0;i<SHIFTS.length;i++){var s=SHIFTS[i];if(s.start<s.end?(h>=s.start&&h<s.end):(h>=s.start||h<s.end))return s}return SHIFTS[0]}
 function waUrl(){
  var t='Halo Azmayra, saya mau pesan '+SK.NAME+' warna '+sel.color.n+' ukuran '+sel.size+'. Apakah stoknya ada?';
  return 'https://wa.me/'+getCS().wa+'?text='+encodeURIComponent(t);
