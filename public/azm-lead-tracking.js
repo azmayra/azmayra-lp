@@ -3,7 +3,7 @@
  var params=new URLSearchParams(location.search),ad=params.get('ad_id')||params.get('meta_ad_id');
  if(!/^\d{5,30}$/.test(ad||''))return; // No stale session attribution on organic visits.
  var product=location.pathname.split('/').pop().replace(/\.html$/,'');
- if(product==='sakeena-bigsize')product='sakeena'; // varian LP: tetap tercatat sebagai Sakeena
+ if(product==='sakeena-bigsize'||/^sakeena-bigsize\./.test(location.hostname))product='sakeena'; // varian LP (path atau subdomain): tetap tercatat sebagai Sakeena
  if(['ghaida','ghania','hafsah','sakeena'].indexOf(product)<0)return;
  var open=window.open.bind(window),pending;
  function marker(){if(!pending)pending=fetch('https://azmayra-dashboard.vercel.app/api/tracking/lp-marker',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ad_id:ad,product:product}),signal:AbortSignal.timeout(5000)}).then(function(r){return r.ok?r.json():null}).then(function(j){return j&&j.marker||null}).catch(function(){return null});return pending}
